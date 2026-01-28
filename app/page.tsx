@@ -18,7 +18,7 @@ export default function CreatePastePage() {
     if (ttlSeconds) body.ttl_seconds = Number(ttlSeconds);
     if (maxViews) body.max_views = Number(maxViews);
 
-    const res = await fetch("/api/pastes", {
+    const res = await fetch("/api/paste", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
